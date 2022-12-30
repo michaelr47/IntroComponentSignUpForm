@@ -1,0 +1,59 @@
+/*
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+#
+
+### Neutral
+
+- Dark Blue: hsl(249, 10%, 26%) 
+- Grayish Blue: hsl(246, 25%, 77%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 16px
+
+### Font
+
+- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+- Weights: 400, 500, 600, 700 */
+
+:root {
+    --primaryRed: hsl(0, 100%, 74%) ;
+    --primaryGreen: hsl(154, 59%, 51%);
+    --freeTrial: hsl(248, 32%, 49%);
+
+
+}
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+body {
+    background-color:  var(--primaryRed);
+    background-image: url('./images/bg-intro-desktop.png');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
