@@ -15,16 +15,41 @@
      margin: 0;
      padding: 0;
      box-sizing: border-box;
+     
 }
+
 
 body {
     background-color:  var(--primaryRed);
     background-image: url('./images/bg-intro-desktop.png');
     font-family: 'Poppins', sans-serif;
+    display: flex;
    
+    justify-content: center;
+    align-items: center;
+   
+    height: 100vh;
+    width: 100vw;
 }
 
+.container {
+   display: flex; 
+   justify-content: space-evenly;
+    
+}
 
+.aboutContainer {
+    width: 45%;
+    height: 50%;
+    border: 2px solid red;
+    text-align: center;
+}
+
+.freeTrialContainer {
+    width: 50%;
+    height: 60%;
+    border: 2px solid blue;
+}
 
 
 
