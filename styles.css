@@ -40,12 +40,12 @@ h1 {
 }
 
 .container {
-   width: 1440px;
-   height: 750px;
-   display: flex; 
-   justify-content: space-evenly;
-   gap: 1.5rem;
-   align-items: center;
+    width: 1440px;
+    height: 750px;
+    display: flex; 
+    justify-content: space-evenly;
+    gap: 1.5rem;
+    align-items: center;
 }
 
 #description-div { width: 500px; }
@@ -58,14 +58,14 @@ h1 {
 }
 
 .freeTrialContainer {
-    margin: 25px 0px 0px;
+    margin: 25px 50px 0px 0px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center; 
-     border: 2px solid red;
-    width: 40%;
-    height: 575px;
+   
+    width: 540px;
+    height: 550px; 
 }
 
 #trialPlanDiv {
@@ -79,7 +79,7 @@ h1 {
     color: white;
     border-radius: 10px;
     padding: 30px;
-    box-shadow: 0px 8px 0.5px rgb(108, 108, 108);
+    box-shadow: 0px 8px 0.5px rgb(162, 162, 162);
 }
 
 #spanBoldText {
@@ -88,22 +88,78 @@ h1 {
 }
 
 #formContainer {
-  height: 80%; 
-  background-color: white;
+    height: 84%;
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+ 
+}
+
+#signUpForm {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: white;
+    height: 100%;  
+    width: 100%; 
+    padding: 35px 35px;
+    border-radius: 10px;
+    
+}
+
+input {
+    height: 3.5rem;
+    width:100%;
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    border-radius: 5px;
+    border: 1px solid lightgray;
 
 }
 
+input:focus {
+    border: 1px solid var(--freeTrial);
+    outline: none;
+}
+
+input::placeholder {
+    padding-left: 30px;
+}
+
+#claimButton {
+    font-size: 1rem;
+    padding: 20px;
+    height: 3.5rem;
+    border-radius: 5px;
+    background-color: var(--primaryGreen);
+    color: white;
+    outline: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    border: none;
+    border-bottom: 4px solid hsl(154, 57%, 46%);
+}
+#claimButton:active {
+    background-color: var(--primaryGreen);
+}
 
 
-
-
-
-
-
-
-
-
-
+#termsAndCondDiv {
+    padding: 10px;
+}
+.termsAndCondText {
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--grayishBlue);
+}
+#t-and-c {
+    color: var(--primaryRed);
+    font-weight: 600;
+}
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
