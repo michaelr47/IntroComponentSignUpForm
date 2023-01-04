@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 :root {
-    --primaryRed: hsl(0, 100%, 74%) ;
+    --primaryRed: #ff7a7a;
     --primaryGreen: hsl(154, 59%, 51%);
     --freeTrial: hsl(248, 32%, 49%);
     --darkBlue:  hsl(249, 10%, 26%) ;
@@ -129,7 +129,7 @@ input:focus {
 
 input::placeholder {
     padding-left: 30px;
-    background: url('./images/icon-error.svg' ) right / contain no-repeat;
+    /* background: url('./images/icon-error.svg' ) right / contain no-repeat; */
     
     
 }
