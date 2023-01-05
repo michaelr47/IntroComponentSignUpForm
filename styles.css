@@ -119,6 +119,7 @@ input {
     font-weight: 600;
     border-radius: 5px;
     border: 1px solid #dfdfdf;
+    padding-left: 30px;
     
 }
 
@@ -128,7 +129,7 @@ input:focus {
 }
 
 input::placeholder {
-    padding-left: 30px;
+  
     margin-right: 1rem;
     /* background: url('./images/icon-error.svg' ) right / contain no-repeat; */
     
@@ -177,8 +178,6 @@ input::placeholder {
  text-align: right;
  padding: 0;
 }
-
-invalid
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
