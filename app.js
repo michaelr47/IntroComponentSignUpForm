@@ -23,13 +23,13 @@ form.addEventListener('submit', function(event) {
 
   // check if the fields are valid
   let isValid = true;
-  if (!isValidName(fname) || !isValidName(lname)) {
+  if (!isValidName(fname) || !isValidName(lname)) { // lname on a separeate if statement
     displayError('Please enter a valid name');
     isValid = false;
   }
 
   if (!isValidEmail(email)) {
-    displayError('Please enter a valid email address');
+    displayError('Please enter a valid email address'); // CHANGE ERROR MESSAGES TO THEIR CORRESPONDING INPUTS
     isValid = false;
   }
   if (!isValidPassword(password)) {
@@ -63,17 +63,13 @@ function displayError(message) {
   emailInvalid.textContent = message;
   passwordInvalid.textContent = message;
   
-    
-    const allInvalidText = invalidText[i];
-    console.log(allInvalidText);
-    
-    invalidText.style.display = 'none';
-
-    const allInputs = document.getElementsByTagName('input')[i];
+    //border change color
     allInputs.style.border = 2 + 'px ' + 'solid ' + '#ff7a7a';
 
-    // const emailInput = document.querySelector('input:nth:child(3)');
-    // console.log(emailInput)
+  
 
-
+    const emailInput = document.querySelector('#emailInput');
+    emailInput.placeholder = 'email@example/com'
+  emailInput.style.color = '#ff7a7a' // placeholder text color
 }
+
