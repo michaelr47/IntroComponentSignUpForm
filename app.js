@@ -1,40 +1,44 @@
 const form = document.forms[0];
-const arrOfClasses = document.getElementsByClassName('invalidText');
 
-for (let i = 0; i < arrOfClasses.length; i++) {
-
-const invalidText = form.getElementsByClassName('invalidText')[i];
-invalidText.style.display = 'none';
+let fNameInvalid = document.getElementById('fNameInvalid');
+let lNameInvalid = document.getElementById('lNameInvalid');
+let emailInvalid = document.getElementById('emailInvalid');
+let passwordInvalid = document.getElementById('passwordInvalid');
+fNameInvalid.style.display = 'none';
+lNameInvalid.style.display = 'none';
+emailInvalid.style.display = 'none';
+passwordInvalid.style.display = 'none';
 
 //need to display svg error symbol to none ********************
-}
+
 
 form.addEventListener('submit', function(event) {
   event.preventDefault();  // prevent the form from being submitted
 
   // get the input field values
-  const fname = document.getElementById('firstNameInput');
-  const lname = document.getElementById('lastNameInput');
-  const email = document.getElementById('emailInput')
-  const password = document.getElementById('passwordInput');
+  const fname = document.getElementById('firstNameInput').value;
+  const lname = document.getElementById('lastNameInput').value;
+  const email = document.getElementById('emailInput').value;
+  const password = document.getElementById('passwordInput').value;
 
   // check if the fields are valid
   let isValid = true;
-  if (!isValidName(fname) || isValidName(lname)) {
-    displayError('nameError', 'Please enter a valid name');
+  if (!isValidName(fname) || !isValidName(lname)) {
+    displayError('Please enter a valid name');
     isValid = false;
   }
 
   if (!isValidEmail(email)) {
-    displayError('emailError', 'Please enter a valid email address');
+    displayError('Please enter a valid email address');
     isValid = false;
   }
   if (!isValidPassword(password)) {
-    displayError('passwordError', 'Please enter a valid password');
+    displayError('Please enter a valid password');
     isValid = false;
   }
 
 });
+
 
 function isValidName(name) {
   // check if the name is not empty and only contains letters
@@ -51,15 +55,17 @@ function isValidPassword(password) {
   return password.length >= 6;
 }
 
-function displayError(id, message) {
+function displayError(message) {
   // display the error message
-  const invalidText = document.querySelectorAll('.invalidText');
-  errorElement.textContent = message;
-
   
-    for (let i = 0; i < arrOfClasses.length; i++) {
+  fNameInvalid.textContent = message;
+  lNameInvalid.textContent = message;
+  emailInvalid.textContent = message;
+  passwordInvalid.textContent = message;
+  
+    
     const allInvalidText = invalidText[i];
-    // console.log(allInvalidText);
+    console.log(allInvalidText);
     
     invalidText.style.display = 'none';
 
@@ -68,6 +74,6 @@ function displayError(id, message) {
 
     // const emailInput = document.querySelector('input:nth:child(3)');
     // console.log(emailInput)
-}
+
 
 }

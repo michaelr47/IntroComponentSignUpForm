@@ -129,11 +129,10 @@ input:focus {
 
 input::placeholder {
     padding-left: 30px;
+    margin-right: 1rem;
     /* background: url('./images/icon-error.svg' ) right / contain no-repeat; */
     
-    
 }
-
 
 #claimButton {
     font-size: 1rem;
@@ -169,13 +168,17 @@ input::placeholder {
 }
 /*  validation style */
 
-.invalidText {
+#fNameInvalid, 
+#lNameInvalid,
+#emailInvalid,
+#passwordInvalid {
  color: var(--primaryRed);
  font-size: 11px;
  text-align: right;
  padding: 0;
- /* margin-bottom: 10px; */
 }
+
+invalid
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }

@@ -34,17 +34,18 @@
 
       <div id="formContainer">
         <form id="signUpForm">
-          <input id="firstNameInput" type="text" name="fName" placeholder="First Name" required>
-          <span class="invalidText">First name cannot be empty</span>
 
+          <input id="firstNameInput" type="text" name="fName" placeholder="First Name" required>
+          <span id="fNameInvalid">First name cannot be empty</span>
+          
           <input id="lastNameInput" type="text" name="lName" placeholder="Last Name" required>
-          <span class="invalidText">Last name cannot be empty</span>
+          <span id="lNameInvalid">Last name cannot be empty</span>
 
           <input id="emailInput" type="email" name="email" placeholder="Email Address" required>
-          <span class="invalidText">Looks like this is not an email</span>
+          <span id="emailInvalid">Looks like this is not an email</span>
 
           <input id="passwordInput" type="password" name="pw" placeholder="Password" required>
-          <span class="invalidText">Password cannot be empty</span>
+          <span id="passwordInvalid">Password cannot be empty</span>
           
           <button type="submit" id="claimButton">Claim Your Free Trial</button>
           <div id="termsAndCondDiv">
