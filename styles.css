@@ -120,7 +120,7 @@ input {
     border-radius: 5px;
     border: 1px solid #dfdfdf;
     padding-left: 30px;
-    
+   
 }
 
 input:focus {
@@ -128,12 +128,10 @@ input:focus {
     outline: none;
 }
 
-input::placeholder {
-  
-    margin-right: 1rem;
-    /* background: url('./images/icon-error.svg' ) right / contain no-repeat; */
-    
-}
+.imgErrorPlaceholder {
+  background: url('./images/icon-error.svg' ) right / contain no-repeat;
+  margin-right: 1rem;
+} 
 
 #claimButton {
     font-size: 1rem;

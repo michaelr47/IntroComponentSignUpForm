@@ -23,25 +23,34 @@ form.addEventListener('submit', function(event) {
 
   
   const emailInput = document.querySelector('#emailInput');
+
+  const allInputs = document.getElementsByTagName('input')[0];
+  allInputs.style.border = 2 + 'px ' + 'solid ' + '#ff7a7a';
+
   // check if the fields are valid
   
-  if (fname.length === '') { 
+  if (!isValidName(fname)) { 
+    document.querySelector('#firstNameInput').style.border = 2 + 'px ' + 'solid ' + '#ff7a7a';
     fNameInvalid.setAttribute('id', 'fNameInvalid');
     fNameInvalid.classList.remove('textHidden');
+
   }
 
   if (!isValidName(lname))  {
+    document.querySelector('#lastNameInput').style.border = 2 + 'px ' + 'solid ' + '#ff7a7a';
     lNameInvalid.style.display = 'inline';
   }
 
   if (!isValidEmail(email)) {
-   emailInvalid.style.display = 'inline';;
-   emailInput.placeholder = 'email@example/com';
-   emailInput.style.color = '#ff7a7a';
+    document.querySelector('#emailInput').style.border = 2 + 'px ' + 'solid ' + '#ff7a7a';
+    emailInvalid.style.display = 'inline';;
+    emailInput.placeholder = 'email@example/com';
+   
 
   }
 
   if (!isValidPassword(password)) {
+    document.querySelector('#passwordInput').style.border = 2 + 'px ' + 'solid ' + '#ff7a7a';
     passwordInvalid.style.display = 'inline';
   }
 
@@ -64,13 +73,8 @@ function isValidPassword(password) {
 }
 
 
-const allInputs = document.getElementsByTagName('input')[0];
-allInputs.style.border = 2 + 'px ' + 'solid ' + '#ff7a7a';
 
+// input1.pseudoClass.add('::placeholder');
+// input1.style.background = "url('./images/icon-error.svg') right / contain no-repeat";
+// input1.style.marginRight = 1 + 'rem';
 
- 
-
-
-
-const fname = document.getElementById('firstNameInput');
-console.log(fname);
