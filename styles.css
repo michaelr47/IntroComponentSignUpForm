@@ -26,7 +26,7 @@ body {
     display: flex;
     justify-content: center;
     align-self: center;
-
+    overflow-x: hidden;
 }
 
 h1 {
@@ -165,7 +165,7 @@ input:focus {
     color: var(--primaryRed);
     font-weight: 700;
 }
-/*  validation style */
+
 
 #fNameInvalid, 
 #lNameInvalid,
@@ -192,4 +192,48 @@ input:focus {
         max-width: 500px;
         margin: 25px 10px 0px 10px;
     }
+}
+
+@media only screen and (max-width: 1050px) {
+    .container { flex-direction: column; }
+    body { background-image: url('./images/bg-intro-mobile.png'); }
+    .aboutContainer { min-width: 450px; }
+    .freeTrialContainer { width: 450px; }
+    h1 { margin: 50px 0px 20px; }
+
+    #description-div {
+        max-width: 350px;
+        text-align: center;
+    }  
+}
+
+@media only screen and (max-width: 576px) {
+    .container {
+        max-width: 370px;
+      
+        margin: 100px;
+    }
+    body {
+        overflow-x:auto;
+    }
+
+   h1 {
+    font-size: 32px;
+    margin: 50px 0px 20px;
+    line-height: 32px;
+   }
+
+   .description-text { 
+    width: 100%;
+    margin-left: 25px;
+}
+
+.aboutContainer { 
+    max-width: 350px;
+    text-align: center 
+}
+
+.freeTrialContainer { width: 325px; }
+
+ #signUpForm { padding: 20px; }
 }
