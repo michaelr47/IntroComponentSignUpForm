@@ -183,3 +183,13 @@ input:focus {
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+@media only screen and (max-width: 1280px) {
+    .aboutContainer { margin: 25px 0px 0px 5px; }
+    #description-div { max-width: 440px; }
+    h1 { text-align: center; }
+    .freeTrialContainer {
+        max-width: 500px;
+        margin: 25px 10px 0px 10px;
+    }
+}
