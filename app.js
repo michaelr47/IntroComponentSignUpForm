@@ -12,8 +12,11 @@ passwordInvalid.classList.add('textHidden')
 //need to display svg error symbol to none ********************
 
 
-form.addEventListener('submit', function(event) {
-  event.preventDefault();  // prevent the form from being submitted
+// const allInputs = document.querySelectorAll('input');
+// allInputs.style.border = 2 + 'px ' + 'solid ' + '#ff7a7a';
+const claimBtn = document.getElementById('claimButton');
+// claimBtn.addEventListener('submit', () => {
+  // event.preventDefault();  // prevent the form from being submitted
 
   // get the input field values
   const fname = document.getElementById('firstNameInput').value;
@@ -24,8 +27,8 @@ form.addEventListener('submit', function(event) {
   
   const emailInput = document.querySelector('#emailInput');
 
-  const allInputs = document.getElementsByTagName('input')[0];
-  allInputs.style.border = 2 + 'px ' + 'solid ' + '#ff7a7a';
+  // const allInputs = document.querySelectorAll('input');
+  // allInputs.style.border = 2 + 'px ' + 'solid ' + '#ff7a7a';
 
   // check if the fields are valid
   
@@ -33,7 +36,7 @@ form.addEventListener('submit', function(event) {
     document.querySelector('#firstNameInput').style.border = 2 + 'px ' + 'solid ' + '#ff7a7a';
     fNameInvalid.setAttribute('id', 'fNameInvalid');
     fNameInvalid.classList.remove('textHidden');
-
+    document.querySelector('#firstNameInput').classList.add("imgErrorPlaceholder");
   }
 
   if (!isValidName(lname))  {
@@ -54,7 +57,7 @@ form.addEventListener('submit', function(event) {
     passwordInvalid.style.display = 'inline';
   }
 
-});
+// });
 
 
 function isValidName(name) {

@@ -128,10 +128,13 @@ input:focus {
     outline: none;
 }
 
-.imgErrorPlaceholder {
+/* .imgErrorPlaceholder {
+ 
   background: url('./images/icon-error.svg' ) right / contain no-repeat;
   margin-right: 1rem;
-} 
+}  */
+
+
 
 #claimButton {
     font-size: 1rem;
