@@ -214,13 +214,15 @@ input:focus {
 }
 
 @media only screen and (max-width: 576px) {
+   
     .container {
-        max-width: 370px;
-      
-        margin: 100px;
+        max-width: 430px;
+        margin: 5px;
+    
     }
     body {
         overflow-x:auto;
+        justify-content: center;
     }
 
    h1 {
