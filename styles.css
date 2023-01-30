@@ -127,9 +127,14 @@ input:focus {
     border: 1px solid var(--freeTrial);
     outline: none;
 }
-
+/* email error */
 .inputErrorPlaceholder::placeholder {
     color: var(--primaryRed);
+}
+/* svgError */
+.backgroundErrorSvg::placeholder {
+    background: url('./images/icon-error.svg') right / contain no-repeat;
+    margin-right: 1rem;
 }
 
 #claimButton {

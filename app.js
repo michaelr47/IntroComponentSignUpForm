@@ -9,7 +9,6 @@ lNameInvalid.classList.add('textHidden')
 emailInvalid.classList.add('textHidden')
 passwordInvalid.classList.add('textHidden')
 
-//need to display svg error symbol to none ********************
 
 const claimBtn = document.getElementById('claimButton');
 claimBtn.addEventListener('click', (event) => {
@@ -28,6 +27,7 @@ claimBtn.addEventListener('click', (event) => {
   
   if (!isValidName(fname)) {
     document.querySelector('#firstNameInput').style.border = '2px solid #ff7a7a';
+    document.querySelector('#firstNameInput').classList.add('backgroundErrorSvg');
     fNameInvalid.style.display = 'block';
   } else {
     document.querySelector('#firstNameInput').style.border = '';
@@ -36,6 +36,7 @@ claimBtn.addEventListener('click', (event) => {
 
   if (!isValidName(lname)) {
     document.querySelector('#lastNameInput').style.border = '2px solid #ff7a7a';
+    document.querySelector('#lastNameInput').classList.add('backgroundErrorSvg');
     lNameInvalid.style.display = 'block';
   } else {
     document.querySelector('#lastNameInput').style.border = '';
@@ -44,6 +45,7 @@ claimBtn.addEventListener('click', (event) => {
 
   if (!isValidEmail(email)) {
     document.querySelector('#emailInput').style.border = '2px solid #ff7a7a';
+    document.querySelector('#emailInput').classList.add('backgroundErrorSvg');
     emailInvalid.style.display = 'block';
     emailInput.placeholder = 'email@example/com';
     emailInput.classList.add('inputErrorPlaceholder');
@@ -54,6 +56,7 @@ claimBtn.addEventListener('click', (event) => {
 
   if (!isValidPassword(password)) {
     document.querySelector('#passwordInput').style.border = '2px solid #ff7a7a';
+    document.querySelector('#passwordInput').classList.add('backgroundErrorSvg');
     passwordInvalid.style.display = 'block';
   }  else {
     document.querySelector('#passwordInput').style.border = '';
