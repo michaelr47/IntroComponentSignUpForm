@@ -11,12 +11,9 @@ passwordInvalid.classList.add('textHidden')
 
 //need to display svg error symbol to none ********************
 
-
-// const allInputs = document.querySelectorAll('input');
-// allInputs.style.border = 2 + 'px ' + 'solid ' + '#ff7a7a';
 const claimBtn = document.getElementById('claimButton');
-// claimBtn.addEventListener('submit', () => {
-  // event.preventDefault();  // prevent the form from being submitted
+claimBtn.addEventListener('click', (event) => {
+  event.preventDefault();  // prevent the form from being submitted
 
   // get the input field values
   const fname = document.getElementById('firstNameInput').value;
@@ -27,37 +24,43 @@ const claimBtn = document.getElementById('claimButton');
   
   const emailInput = document.querySelector('#emailInput');
 
-  // const allInputs = document.querySelectorAll('input');
-  // allInputs.style.border = 2 + 'px ' + 'solid ' + '#ff7a7a';
-
   // check if the fields are valid
   
-  if (!isValidName(fname)) { 
-    document.querySelector('#firstNameInput').style.border = 2 + 'px ' + 'solid ' + '#ff7a7a';
-    fNameInvalid.setAttribute('id', 'fNameInvalid');
-    fNameInvalid.classList.remove('textHidden');
-    document.querySelector('#firstNameInput').classList.add("imgErrorPlaceholder");
+  if (!isValidName(fname)) {
+    document.querySelector('#firstNameInput').style.border = '2px solid #ff7a7a';
+    fNameInvalid.style.display = 'block';
+  } else {
+    document.querySelector('#firstNameInput').style.border = '';
+    fNameInvalid.style.display = 'none';
   }
 
-  if (!isValidName(lname))  {
-    document.querySelector('#lastNameInput').style.border = 2 + 'px ' + 'solid ' + '#ff7a7a';
-    lNameInvalid.style.display = 'inline';
+  if (!isValidName(lname)) {
+    document.querySelector('#lastNameInput').style.border = '2px solid #ff7a7a';
+    lNameInvalid.style.display = 'block';
+  } else {
+    document.querySelector('#lastNameInput').style.border = '';
+    lNameInvalid.style.display = 'none';
   }
 
   if (!isValidEmail(email)) {
-    document.querySelector('#emailInput').style.border = 2 + 'px ' + 'solid ' + '#ff7a7a';
-    emailInvalid.style.display = 'inline';;
+    document.querySelector('#emailInput').style.border = '2px solid #ff7a7a';
+    emailInvalid.style.display = 'block';
     emailInput.placeholder = 'email@example/com';
-   
-
+    emailInput.classList.add('inputErrorPlaceholder');
+  } else {
+    document.querySelector('#emailInput').style.border = '';
+    emailInvalid.style.display = 'none';
   }
 
   if (!isValidPassword(password)) {
-    document.querySelector('#passwordInput').style.border = 2 + 'px ' + 'solid ' + '#ff7a7a';
-    passwordInvalid.style.display = 'inline';
+    document.querySelector('#passwordInput').style.border = '2px solid #ff7a7a';
+    passwordInvalid.style.display = 'block';
+  }  else {
+    document.querySelector('#passwordInput').style.border = '';
+    passwordInvalid.style.display = 'none';
   }
 
-// });
+});
 
 
 function isValidName(name) {
@@ -81,3 +84,10 @@ function isValidPassword(password) {
 // input1.style.background = "url('./images/icon-error.svg') right / contain no-repeat";
 // input1.style.marginRight = 1 + 'rem';
 
+
+// querySelector('input[name="pwd"]')
+// function checkForm(){
+//   var form = document.forms[0];
+//   var selectElement = form.querySelector('input[name="pwd"]');
+//   var selectedValue = selectElement.value;
+// }

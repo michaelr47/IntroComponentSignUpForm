@@ -114,7 +114,7 @@ h1 {
 input {
     height: 3.5rem;
     width:100%;
-    margin-bottom: 15px;
+    margin-bottom: 14px;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     border-radius: 5px;
@@ -128,13 +128,9 @@ input:focus {
     outline: none;
 }
 
-/* .imgErrorPlaceholder {
- 
-  background: url('./images/icon-error.svg' ) right / contain no-repeat;
-  margin-right: 1rem;
-}  */
-
-
+.inputErrorPlaceholder::placeholder {
+    color: var(--primaryRed);
+}
 
 #claimButton {
     font-size: 1rem;
@@ -176,6 +172,7 @@ input:focus {
 #passwordInvalid {
  color: var(--primaryRed);
  font-size: 11px;
+ font-style: italic;
  text-align: right;
  padding: 0;
 }
