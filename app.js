@@ -80,17 +80,3 @@ function isValidPassword(password) {
   // check if the password is not empty and at least 6 characters long
   return password.length >= 6;
 }
-
-
-
-// input1.pseudoClass.add('::placeholder');
-// input1.style.background = "url('./images/icon-error.svg') right / contain no-repeat";
-// input1.style.marginRight = 1 + 'rem';
-
-
-// querySelector('input[name="pwd"]')
-// function checkForm(){
-//   var form = document.forms[0];
-//   var selectElement = form.querySelector('input[name="pwd"]');
-//   var selectedValue = selectElement.value;
-// }
