@@ -38,7 +38,6 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- Mobile-first workflow
 
 ### What I learned
 
@@ -64,4 +63,4 @@ function isValidPassword(password) {
 
 
 - Frontend Mentor - [@michaelr47](https://www.frontendmentor.io/profile/michaelr47)
-- GitHub - same as FM username ^
+- GitHub - [michaelr47](https://github.com/michaelr47)
