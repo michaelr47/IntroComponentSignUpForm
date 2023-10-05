@@ -4,11 +4,12 @@ let fNameInvalid = document.getElementById('fNameInvalid');
 let lNameInvalid = document.getElementById('lNameInvalid');
 let emailInvalid = document.getElementById('emailInvalid');
 let passwordInvalid = document.getElementById('passwordInvalid');
-fNameInvalid.classList.add('textHidden')
-lNameInvalid.classList.add('textHidden')
-emailInvalid.classList.add('textHidden')
-passwordInvalid.classList.add('textHidden')
 
+let invalidInputs = [fNameInvalid, lNameInvalid, emailInvalid, passwordInvalid];
+
+for (const input of invalidInputs) {
+  input.classList.add('textHidden');
+}
 
 const claimBtn = document.getElementById('claimButton');
 claimBtn.addEventListener('click', (event) => {
